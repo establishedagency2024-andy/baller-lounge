@@ -8,67 +8,67 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Luxury Dark Theme - Billion Ballers */
-    --background: 220 26% 8%;
-    --foreground: 35 20% 92%;
+    /* Light Theme - Billion Ballers */
+    --background: 0 0% 100%;
+    --foreground: 220 26% 12%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 35 20% 92%;
+    --card: 0 0% 98%;
+    --card-foreground: 220 26% 12%;
 
-    --popover: 220 22% 10%;
-    --popover-foreground: 35 20% 92%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 26% 12%;
 
-    /* Gold accent - primary luxury color */
-    --primary: 43 74% 60%;
-    --primary-foreground: 220 26% 8%;
+    /* Blue accent - primary brand color */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
     /* Silver/Platinum accent */
-    --secondary: 210 5% 75%;
-    --secondary-foreground: 220 26% 8%;
+    --secondary: 210 10% 50%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 210 10% 60%;
+    --muted: 210 10% 95%;
+    --muted-foreground: 220 10% 40%;
 
-    --accent: 43 74% 60%;
-    --accent-foreground: 220 26% 8%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 70% 58%;
-    --destructive-foreground: 35 20% 92%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 20%;
-    --ring: 43 74% 60%;
+    --border: 220 10% 85%;
+    --input: 220 10% 85%;
+    --ring: 217 91% 60%;
 
     --radius: 0.75rem;
 
     /* Luxury gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 60%) 0%, hsl(38 90% 50%) 100%);
-    --gradient-silver: linear-gradient(135deg, hsl(210 5% 75%) 0%, hsl(210 10% 85%) 100%);
-    --gradient-platinum: linear-gradient(135deg, hsl(210 5% 70%) 0%, hsl(220 8% 90%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(220 20% 12%) 0%, hsl(220 18% 15%) 100%);
-    --gradient-navy: linear-gradient(135deg, hsl(220 35% 15%) 0%, hsl(220 30% 22%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
+    --gradient-silver: linear-gradient(135deg, hsl(210 10% 70%) 0%, hsl(210 10% 80%) 100%);
+    --gradient-platinum: linear-gradient(135deg, hsl(210 10% 75%) 0%, hsl(210 10% 85%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 100%) 100%);
+    --gradient-navy: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(217 91% 50%) 100%);
     --gradient-orange: linear-gradient(135deg, hsl(15 85% 55%) 0%, hsl(25 90% 60%) 100%);
     --gradient-cyan: linear-gradient(135deg, hsl(185 70% 50%) 0%, hsl(195 75% 55%) 100%);
 
     /* Tier colors */
-    --tier-silver: 210 5% 75%;
-    --tier-gold: 43 74% 60%;
-    --tier-platinum: 210 8% 85%;
+    --tier-silver: 210 10% 60%;
+    --tier-gold: 217 91% 60%;
+    --tier-platinum: 210 10% 70%;
 
     /* Sidebar */
-    --sidebar-background: 220 28% 6%;
-    --sidebar-foreground: 35 15% 85%;
-    --sidebar-primary: 43 74% 60%;
-    --sidebar-primary-foreground: 220 26% 8%;
-    --sidebar-accent: 220 20% 12%;
-    --sidebar-accent-foreground: 35 20% 92%;
-    --sidebar-border: 220 20% 15%;
-    --sidebar-ring: 43 74% 60%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 26% 12%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 95%;
+    --sidebar-accent-foreground: 220 26% 12%;
+    --sidebar-border: 220 10% 90%;
+    --sidebar-ring: 217 91% 60%;
 
     /* Shadows and glows */
-    --shadow-luxury: 0 10px 40px -15px hsl(220 30% 5% / 0.6);
-    --glow-gold: 0 0 30px hsl(43 74% 60% / 0.3);
-    --glow-silver: 0 0 30px hsl(210 5% 75% / 0.2);
+    --shadow-luxury: 0 10px 40px -15px hsl(220 30% 20% / 0.15);
+    --glow-blue: 0 0 30px hsl(217 91% 60% / 0.3);
+    --glow-silver: 0 0 30px hsl(210 10% 70% / 0.2);
 
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -92,8 +92,8 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  .luxury-gradient-gold {
-    background: var(--gradient-gold);
+  .luxury-gradient-blue {
+    background: var(--gradient-blue);
   }
 
   .luxury-gradient-silver {
@@ -108,8 +108,8 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-luxury);
   }
 
-  .glow-gold {
-    box-shadow: var(--glow-gold);
+  .glow-blue {
+    box-shadow: var(--glow-blue);
   }
 
   .smooth-transition {
