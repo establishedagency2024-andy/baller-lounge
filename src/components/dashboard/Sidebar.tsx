@@ -14,8 +14,8 @@ export function Sidebar() {
     <aside className="fixed left-0 top-0 h-screen w-64 bg-sidebar border-r border-sidebar-border luxury-shadow">
       <div className="flex flex-col h-full">
         {/* Logo/Brand */}
-        <div className="p-6 border-b border-sidebar-border">
-          <h1 className="text-2xl font-bold luxury-gradient-blue bg-clip-text text-transparent">
+        <div className="p-6">
+          <h1 className="text-2xl font-bold text-foreground">
             Billion Ballers
           </h1>
         </div>
