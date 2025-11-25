@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        tier: {
+          silver: "hsl(var(--tier-silver))",
+          gold: "hsl(var(--tier-gold))",
+          platinum: "hsl(var(--tier-platinum))",
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
