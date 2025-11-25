@@ -48,7 +48,7 @@ export function CurrentGiveaway({
       
       <div className="relative p-6 flex flex-col md:flex-row gap-6 items-center">
         {/* Prize Image */}
-        <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden luxury-shadow glow-gold flex-shrink-0">
+        <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden luxury-shadow glow-blue flex-shrink-0">
           <img 
             src={prizeImage} 
             alt={prizeTitle}

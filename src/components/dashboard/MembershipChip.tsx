@@ -14,7 +14,7 @@ const tierConfig = {
   },
   gold: {
     label: "Gold Member",
-    bgClass: "luxury-gradient-gold",
+    bgClass: "luxury-gradient-blue",
     textClass: "text-primary-foreground",
   },
   platinum: {
