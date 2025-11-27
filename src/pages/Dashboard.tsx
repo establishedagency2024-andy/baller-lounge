@@ -31,8 +31,8 @@ const Dashboard = () => {
         currentLevel={1}
         nextLevel={2}
         daysUntilUnlock={11}
-        memberDays={2}
-        progress={15}
+        memberDays={256}
+        progress={50}
       />
 
       {/* Membership Perks */}
