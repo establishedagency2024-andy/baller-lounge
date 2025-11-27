@@ -7,25 +7,39 @@ import { useState, useEffect } from "react";
 const Giveaways = () => {
   const [showHistory, setShowHistory] = useState(false);
   const [entryCount, setEntryCount] = useState(0);
+  const [activeDraws, setActiveDraws] = useState(0);
+  const [nextEntryDays, setNextEntryDays] = useState(0);
+  const [currentPeriodEntries, setCurrentPeriodEntries] = useState(0);
+  const [nextPeriodEntries, setNextPeriodEntries] = useState(0);
 
   useEffect(() => {
-    const targetCount = 137;
-    const duration = 2000; // 2 seconds
-    const steps = 60;
-    const increment = targetCount / steps;
-    let currentStep = 0;
+    const animateCounter = (target: number, setter: (val: number) => void, duration = 2000) => {
+      const steps = 60;
+      const increment = target / steps;
+      let currentStep = 0;
 
-    const timer = setInterval(() => {
-      currentStep++;
-      if (currentStep >= steps) {
-        setEntryCount(targetCount);
-        clearInterval(timer);
-      } else {
-        setEntryCount(Math.floor(increment * currentStep));
-      }
-    }, duration / steps);
+      const timer = setInterval(() => {
+        currentStep++;
+        if (currentStep >= steps) {
+          setter(target);
+          clearInterval(timer);
+        } else {
+          setter(Math.floor(increment * currentStep));
+        }
+      }, duration / steps);
 
-    return () => clearInterval(timer);
+      return timer;
+    };
+
+    const timers = [
+      animateCounter(137, setEntryCount),
+      animateCounter(1, setActiveDraws),
+      animateCounter(11, setNextEntryDays),
+      animateCounter(1, setCurrentPeriodEntries),
+      animateCounter(1, setNextPeriodEntries),
+    ];
+
+    return () => timers.forEach(timer => clearInterval(timer));
   }, []);
 
   return (
@@ -61,7 +75,7 @@ const Giveaways = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Active Draws</p>
-                <p className="text-3xl font-bold text-foreground">1</p>
+                <p className="text-3xl font-bold text-foreground">{activeDraws}</p>
               </div>
             </div>
           </Card>
@@ -73,7 +87,7 @@ const Giveaways = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Next Entry</p>
-                <p className="text-3xl font-bold text-foreground">11d</p>
+                <p className="text-3xl font-bold text-foreground">{nextEntryDays}d</p>
               </div>
             </div>
           </Card>
@@ -89,7 +103,7 @@ const Giveaways = () => {
                 <p className="text-sm text-muted-foreground">Nov 23 - Dec 7, 2025</p>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-bold text-primary">+1</p>
+                <p className="text-2xl font-bold text-primary">+{currentPeriodEntries}</p>
                 <p className="text-sm text-muted-foreground">entry</p>
               </div>
             </div>
@@ -99,7 +113,7 @@ const Giveaways = () => {
                 <p className="text-sm text-muted-foreground">Dec 7 - Dec 21, 2025</p>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-bold text-muted-foreground">+1</p>
+                <p className="text-2xl font-bold text-muted-foreground">+{nextPeriodEntries}</p>
                 <p className="text-sm text-muted-foreground">entry</p>
               </div>
             </div>
