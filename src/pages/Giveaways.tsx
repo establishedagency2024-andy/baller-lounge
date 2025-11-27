@@ -2,10 +2,31 @@ import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, TrendingUp } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Giveaways = () => {
   const [showHistory, setShowHistory] = useState(false);
+  const [entryCount, setEntryCount] = useState(0);
+
+  useEffect(() => {
+    const targetCount = 137;
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const increment = targetCount / steps;
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      if (currentStep >= steps) {
+        setEntryCount(targetCount);
+        clearInterval(timer);
+      } else {
+        setEntryCount(Math.floor(increment * currentStep));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="space-y-8 animate-fade-up">
@@ -28,7 +49,7 @@ const Giveaways = () => {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Total Entries</p>
-                <p className="text-3xl font-bold text-foreground">137</p>
+                <p className="text-3xl font-bold text-foreground">{entryCount}</p>
               </div>
             </div>
           </Card>
