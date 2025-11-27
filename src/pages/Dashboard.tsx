@@ -79,19 +79,19 @@ const Dashboard = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <DiscountCard
-            brand="Premium Watches"
-            offer="Luxury timepieces for members"
-            discount="20% OFF"
+            category="Fashion"
+            title="Platinum Members 50% Off designer fashion collections"
+            imageUrl="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80"
           />
           <DiscountCard
-            brand="Designer Fashion"
-            offer="Exclusive fashion collections"
-            discount="15% OFF"
+            category="Hospitality"
+            title="Platinum Members 60% Off at hotels worldwide from premium hotel groups"
+            imageUrl="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
           />
           <DiscountCard
-            brand="Fine Jewelry"
-            offer="Curated jewelry pieces"
-            discount="25% OFF"
+            category="Flight"
+            title="Platinum Members 30 - 70% Off Business and First Class Tickets"
+            imageUrl="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
           />
         </div>
       </section>
