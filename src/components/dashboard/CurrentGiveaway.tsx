@@ -103,8 +103,8 @@ export function CurrentGiveaway({
           </div>
 
           {/* Countdown */}
-          <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-lg w-fit mx-auto md:mx-0">
-            <Timer className="w-5 h-5 text-white" />
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg w-fit mx-auto md:mx-0">
+            <Timer className="w-5 h-5 text-primary" />
             <div>
               <p className="text-xs text-white/70">Draw ends in</p>
               <p className="font-mono font-semibold text-white">{timeLeft}</p>
