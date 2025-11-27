@@ -17,11 +17,11 @@ const Subscription = () => {
         </h1>
 
         {/* Main Subscription Card */}
-        <Card className="bg-gradient-to-br from-gray-300 via-gray-600 to-black border-0 luxury-shadow max-w-3xl">
+        <Card className="bg-gradient-to-br from-gray-400 via-gray-700 to-black border-0 luxury-shadow max-w-3xl">
           <div className="p-8 space-y-6">
             {/* Header */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900">Platinum Member</h2>
+              <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
             </div>
 
             {/* Status Badges */}
