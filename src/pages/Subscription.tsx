@@ -20,14 +20,8 @@ const Subscription = () => {
         <Card className="bg-gradient-to-br from-gray-300 via-gray-600 to-black border-0 luxury-shadow max-w-3xl">
           <div className="p-8 space-y-6">
             {/* Header */}
-            <div className="flex items-start justify-between">
-              <div>
-                <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
-              </div>
-              <div className="text-right">
-                <p className="text-4xl font-bold text-gray-900">$29</p>
-                <p className="text-sm text-gray-600">fortnightly</p>
-              </div>
+            <div>
+              <h2 className="text-3xl font-bold text-gray-900">Platinum Member</h2>
             </div>
 
             {/* Status Badges */}
