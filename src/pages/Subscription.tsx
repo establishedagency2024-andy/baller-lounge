@@ -17,18 +17,12 @@ const Subscription = () => {
         </h1>
 
         {/* Main Subscription Card */}
-        <Card className="bg-gradient-to-br from-[#e8dcc4] to-[#d4c5a9] border-0 luxury-shadow max-w-3xl">
+        <Card className="bg-gradient-to-br from-gray-300 via-gray-600 to-black border-0 luxury-shadow max-w-3xl">
           <div className="p-8 space-y-6">
             {/* Header */}
             <div className="flex items-start justify-between">
-              <div className="flex items-center gap-3">
-                <Crown className="w-8 h-8 text-amber-700" />
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900">Basic</h2>
-                  <p className="text-sm text-gray-600">
-                    Your subscription renews not available
-                  </p>
-                </div>
+              <div>
+                <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
               </div>
               <div className="text-right">
                 <p className="text-4xl font-bold text-gray-900">$29</p>
@@ -38,7 +32,7 @@ const Subscription = () => {
 
             {/* Status Badges */}
             <div className="flex flex-wrap gap-2">
-              <div className="px-4 py-2 bg-gray-900/80 text-white rounded-full text-sm font-medium flex items-center gap-2">
+              <div className="px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium flex items-center gap-2">
                 <Star className="w-4 h-4" />
                 Level 1
               </div>
@@ -55,22 +49,13 @@ const Subscription = () => {
                 "6x multiplier on all future one-time purchases, all draw long",
                 "You can pause your membership in 2 days for up to 3 months.",
               ].map((benefit, index) => (
-                <div key={index} className="flex items-start gap-3 text-gray-800">
-                  <Check className="w-5 h-5 mt-0.5 text-emerald-600 flex-shrink-0" />
+                <div key={index} className="flex items-start gap-3 text-white">
+                  <Check className="w-5 h-5 mt-0.5 text-emerald-400 flex-shrink-0" />
                   <span>{benefit}</span>
                 </div>
               ))}
             </div>
 
-            {/* Actions */}
-            <div className="flex gap-3 pt-4">
-              <Button className="flex-1 bg-gray-900 hover:bg-gray-800 text-white">
-                Pause Membership
-              </Button>
-              <Button variant="outline" className="flex-1">
-                Change Plan
-              </Button>
-            </div>
           </div>
         </Card>
 
