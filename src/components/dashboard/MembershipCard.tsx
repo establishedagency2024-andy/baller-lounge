@@ -56,9 +56,10 @@ export function MembershipCard({ memberName, memberNumber, memberDate }: Members
               </h2>
             </div>
             <div className="text-right">
-              <span className="text-2xl font-bold text-white/90 font-mono">
+              <p className="text-2xl font-bold text-white/90 font-mono">
                 {animatedNumber}
-              </span>
+              </p>
+              <p className="text-xs text-white/60 uppercase tracking-wider">entries</p>
             </div>
           </div>
           
