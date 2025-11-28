@@ -4,8 +4,9 @@ import { LevelProgress } from "@/components/dashboard/LevelProgress";
 import { PerkCard } from "@/components/dashboard/PerkCard";
 import { DiscountCard } from "@/components/dashboard/DiscountCard";
 import { WinnerCard } from "@/components/dashboard/WinnerCard";
-import { SubscriptionPreview } from "@/components/dashboard/SubscriptionPreview";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Check, Star } from "lucide-react";
 
 const Dashboard = () => {
   return (
@@ -129,18 +130,40 @@ const Dashboard = () => {
       {/* Subscription Section */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
-        <SubscriptionPreview
-          tier="Basic"
-          price="$29"
-          billingCycle="fortnightly"
-          status="Active and up to date"
-          benefits={[
-            "1 entries into every draw (accumulating by +1 entry 2 weeks)",
-            "1 connect credits send to our app (1 connect credits every 2 weeks)",
-            "6x multiplier on all future one-time purchases, all draw long",
-            "You can pause your membership in 2 days for up to 3 months.",
-          ]}
-        />
+        <Card className="bg-gradient-to-br from-gray-400 via-gray-700 to-black border-0 luxury-shadow max-w-3xl">
+          <div className="p-8 space-y-6">
+            {/* Header */}
+            <div>
+              <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
+            </div>
+
+            {/* Status Badges */}
+            <div className="flex flex-wrap gap-2">
+              <div className="px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium flex items-center gap-2">
+                <Star className="w-4 h-4" />
+                Level 1
+              </div>
+              <div className="px-4 py-2 bg-emerald-500 text-white rounded-full text-sm font-medium">
+                Active and up to date
+              </div>
+            </div>
+
+            {/* Benefits */}
+            <div className="space-y-3 py-4">
+              {[
+                "1 entries into every draw (accumulating by +1 entry 2 weeks)",
+                "1 connect credits send to our app (1 connect credits every 2 weeks)",
+                "6x multiplier on all future one-time purchases, all draw long",
+                "You can pause your membership in 2 days for up to 3 months.",
+              ].map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3 text-white">
+                  <Check className="w-5 h-5 mt-0.5 text-emerald-400 flex-shrink-0" />
+                  <span>{benefit}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </Card>
       </section>
     </div>
   );
