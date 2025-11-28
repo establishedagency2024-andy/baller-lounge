@@ -1,7 +1,5 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
-import { MembershipChip } from "@/components/dashboard/MembershipChip";
-import { Card } from "@/components/ui/card";
-import { QrCode } from "lucide-react";
+import { MembershipCard } from "@/components/dashboard/MembershipCard";
 
 const Membership = () => {
   return (
@@ -12,47 +10,19 @@ const Membership = () => {
       </div>
 
       <div className="space-y-6">
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground text-center">
           Your Membership Card
         </h1>
 
-        <Card className="luxury-gradient-card luxury-shadow border-border/50 p-8 max-w-2xl mx-auto">
-          <div className="space-y-6">
-            {/* Member Tier */}
-            <div className="flex justify-center">
-              <MembershipChip tier="platinum" />
-            </div>
+        <MembershipCard 
+          memberName="Andrew De Angelis"
+          memberNumber={137}
+          memberDate="10/24"
+        />
 
-            {/* Member Details */}
-            <div className="space-y-4 text-center">
-              <div>
-                <p className="text-sm text-muted-foreground">Member Name</p>
-                <p className="text-2xl font-bold text-foreground">Andy</p>
-              </div>
-              
-              <div>
-                <p className="text-sm text-muted-foreground">Member ID</p>
-                <p className="text-xl font-mono text-foreground">BB-2025-4782</p>
-              </div>
-
-              <div>
-                <p className="text-sm text-muted-foreground">Member Since</p>
-                <p className="text-lg text-foreground">November 23, 2025</p>
-              </div>
-            </div>
-
-            {/* QR Code Placeholder */}
-            <div className="flex justify-center pt-6">
-              <div className="p-8 bg-white rounded-xl">
-                <QrCode className="w-32 h-32 text-gray-900" />
-              </div>
-            </div>
-
-            <p className="text-center text-sm text-muted-foreground">
-              Scan this code at partner locations for exclusive discounts
-            </p>
-          </div>
-        </Card>
+        <p className="text-center text-sm text-muted-foreground mt-8">
+          Show this card at partner locations for exclusive discounts
+        </p>
       </div>
     </div>
   );
