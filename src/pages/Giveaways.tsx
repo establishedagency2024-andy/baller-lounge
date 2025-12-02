@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 const Giveaways = () => {
   const [showHistory, setShowHistory] = useState(false);
   const [entryCount, setEntryCount] = useState(0);
-  const [activeDraws, setActiveDraws] = useState(0);
   const [nextEntryDays, setNextEntryDays] = useState(0);
   const [currentPeriodEntries, setCurrentPeriodEntries] = useState(0);
   const [nextPeriodEntries, setNextPeriodEntries] = useState(0);
@@ -33,7 +32,6 @@ const Giveaways = () => {
 
     const timers = [
       animateCounter(137, setEntryCount),
-      animateCounter(1, setActiveDraws),
       animateCounter(11, setNextEntryDays),
       animateCounter(1, setCurrentPeriodEntries),
       animateCounter(1, setNextPeriodEntries),
@@ -55,7 +53,7 @@ const Giveaways = () => {
         </h1>
 
         {/* Entry Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="luxury-gradient-card luxury-shadow border-border/50 p-6">
             <div className="flex items-center gap-3">
               <div className="p-3 rounded-lg bg-primary/10">
@@ -72,18 +70,6 @@ const Giveaways = () => {
             <div className="flex items-center gap-3">
               <div className="p-3 rounded-lg bg-primary/10">
                 <Calendar className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Active Draws</p>
-                <p className="text-3xl font-bold text-foreground">{activeDraws}</p>
-              </div>
-            </div>
-          </Card>
-
-          <Card className="luxury-gradient-card luxury-shadow border-border/50 p-6">
-            <div className="flex items-center gap-3">
-              <div className="p-3 rounded-lg bg-primary/10">
-                <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Next Entry</p>
