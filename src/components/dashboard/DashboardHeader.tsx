@@ -1,5 +1,6 @@
 import { Crown } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Card } from "@/components/ui/card";
 
 export function DashboardHeader() {
   const [daysCount, setDaysCount] = useState(0);
@@ -24,8 +25,12 @@ export function DashboardHeader() {
   }, []);
 
   return (
-    <div className="w-full bg-background mb-8">
-      <div className="w-full bg-gradient-to-br from-gray-400 via-gray-700 to-black px-8 py-6 luxury-shadow">
+    <Card className="relative overflow-hidden border-border/50 animate-fade-up mb-6">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-400 via-gray-600 to-black animate-gradient-shift" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-gray-500/30 via-transparent to-gray-300/20 animate-gradient-pulse" />
+      
+      <div className="relative px-8 py-6">
         <div className="flex items-center justify-between">
           {/* Platinum Member - Left */}
           <div className="flex items-center gap-3">
@@ -40,6 +45,6 @@ export function DashboardHeader() {
           </div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 }
