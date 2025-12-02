@@ -78,7 +78,7 @@ export function CurrentGiveaway({
         <p className="text-5xl font-bold text-foreground mb-1">
           {animatedEntries.toLocaleString()}
         </p>
-        <p className="text-sm text-muted-foreground uppercase tracking-wider">ENTRIES</p>
+        <p className="text-sm text-muted-foreground uppercase tracking-wider">TOTAL ENTRIES</p>
       </div>
 
       <div className="relative p-6 flex flex-col md:flex-row gap-6 items-start">

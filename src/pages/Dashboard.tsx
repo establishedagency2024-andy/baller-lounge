@@ -1,8 +1,6 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
 import { MembershipChip } from "@/components/dashboard/MembershipChip";
 import { PerkCard } from "@/components/dashboard/PerkCard";
-import { DiscountCard } from "@/components/dashboard/DiscountCard";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
 
@@ -57,31 +55,6 @@ const Dashboard = () => {
               "Premium support",
               "VIP community access",
             ]}
-          />
-        </div>
-      </section>
-
-      {/* Discounts Section */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-foreground">Exclusive Discounts</h2>
-          <Button variant="outline">View All</Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <DiscountCard
-            category="Fashion"
-            title="Platinum Members 50% Off designer fashion collections"
-            imageUrl="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80"
-          />
-          <DiscountCard
-            category="Hospitality"
-            title="Platinum Members 60% Off at hotels worldwide from premium hotel groups"
-            imageUrl="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
-          />
-          <DiscountCard
-            category="Flight"
-            title="Platinum Members 30 - 70% Off Business and First Class Tickets"
-            imageUrl="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
           />
         </div>
       </section>
