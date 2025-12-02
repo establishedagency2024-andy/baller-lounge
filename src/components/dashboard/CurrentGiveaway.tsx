@@ -81,14 +81,25 @@ export function CurrentGiveaway({
         <p className="text-sm text-muted-foreground uppercase tracking-wider">ENTRIES</p>
       </div>
 
-      <div className="relative p-6 flex flex-col md:flex-row gap-6 items-center">
-        {/* Prize Image */}
-        <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden luxury-shadow glow-blue flex-shrink-0">
-          <img 
-            src={prizeImage} 
-            alt={prizeTitle}
-            className="w-full h-full object-cover"
-          />
+      <div className="relative p-6 flex flex-col md:flex-row gap-6 items-start">
+        {/* Prize Image and Timer */}
+        <div className="flex flex-col items-center gap-4 flex-shrink-0">
+          <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden luxury-shadow glow-blue">
+            <img 
+              src={prizeImage} 
+              alt={prizeTitle}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          
+          {/* Countdown - Under Image */}
+          <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg">
+            <Timer className="w-5 h-5 text-primary" />
+            <div>
+              <p className="text-xs text-muted-foreground">Draw ends in</p>
+              <p className="font-mono font-semibold text-foreground">{timeLeft}</p>
+            </div>
+          </div>
         </div>
 
         {/* Content */}
@@ -102,22 +113,13 @@ export function CurrentGiveaway({
             </h2>
           </div>
 
-          {/* Countdown */}
-          <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg w-fit mx-auto md:mx-0">
-            <Timer className="w-5 h-5 text-primary" />
-            <div>
-              <p className="text-xs text-muted-foreground">Draw ends in</p>
-              <p className="font-mono font-semibold text-foreground">{timeLeft}</p>
-            </div>
+          {/* Relax Text - Under Title */}
+          <div className={`transition-all duration-700 ${showRelaxText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <p className="text-xl md:text-2xl font-semibold text-foreground">
+              Relax — you're already locked into this draw.
+            </p>
           </div>
         </div>
-      </div>
-
-      {/* Relax Text - Bottom with Timer Reveal */}
-      <div className={`px-6 pb-6 transition-all duration-700 ${showRelaxText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <p className="text-2xl md:text-3xl font-semibold text-foreground text-center">
-          Relax — you're already locked into this draw.
-        </p>
       </div>
     </Card>
   );
