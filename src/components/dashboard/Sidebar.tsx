@@ -6,7 +6,7 @@ const menuItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
   { title: "Membership Card", url: "/membership", icon: CreditCard },
   { title: "Giveaways & Entries", url: "/giveaways", icon: Trophy },
-  { title: "Loyalty & Rewards", url: "/discounts", icon: Gift },
+  { title: "Discounts & Rewards", url: "/discounts", icon: Gift },
   { title: "Subscription", url: "/subscription", icon: Settings },
 ];
 
