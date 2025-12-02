@@ -1,9 +1,7 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
 import { MembershipChip } from "@/components/dashboard/MembershipChip";
-import { LevelProgress } from "@/components/dashboard/LevelProgress";
 import { PerkCard } from "@/components/dashboard/PerkCard";
 import { DiscountCard } from "@/components/dashboard/DiscountCard";
-import { WinnerCard } from "@/components/dashboard/WinnerCard";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
@@ -26,15 +24,6 @@ const Dashboard = () => {
           Welcome to your personal Billion Ballers Dashboard
         </p>
       </div>
-
-      {/* Level Progress */}
-      <LevelProgress
-        currentLevel={1}
-        nextLevel={2}
-        daysUntilUnlock={11}
-        memberDays={256}
-        progress={50}
-      />
 
       {/* Membership Perks */}
       <section className="space-y-4">
@@ -97,41 +86,15 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* Past Winners */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-foreground">Recent Winners</h2>
-          <Button variant="outline">View All Winners</Button>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <WinnerCard
-            winnerName="Member #4523"
-            prize="Rolex Submariner"
-            date="November 15, 2025"
-          />
-          <WinnerCard
-            winnerName="Member #2891"
-            prize="Patek Philippe Nautilus"
-            date="November 8, 2025"
-          />
-          <WinnerCard
-            winnerName="Member #6742"
-            prize="Audemars Piguet Royal Oak"
-            date="November 1, 2025"
-          />
-          <WinnerCard
-            winnerName="Member #1205"
-            prize="Omega Speedmaster"
-            date="October 25, 2025"
-          />
-        </div>
-      </section>
-
       {/* Subscription Section */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
-        <Card className="bg-gradient-to-br from-gray-400 via-gray-700 to-black border-0 luxury-shadow max-w-3xl">
-          <div className="p-8 space-y-6">
+        <Card className="relative overflow-hidden border-0 luxury-shadow">
+          {/* Animated gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-400 via-gray-600 to-black animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-gray-500/30 via-transparent to-gray-300/20 animate-gradient-pulse" />
+          
+          <div className="relative p-8 space-y-6">
             {/* Header */}
             <div>
               <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
