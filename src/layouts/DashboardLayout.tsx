@@ -19,8 +19,8 @@ export function DashboardLayout() {
           isSidebarCollapsed ? "ml-16" : "ml-64"
         )}
       >
-        <DashboardHeader />
-        <div className="max-w-7xl mx-auto px-8">
+        <div className="max-w-7xl mx-auto px-8 pt-8">
+          <DashboardHeader />
           <Outlet />
         </div>
       </main>
