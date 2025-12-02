@@ -17,8 +17,12 @@ const Subscription = () => {
         </h1>
 
         {/* Main Subscription Card */}
-        <Card className="bg-gradient-to-br from-gray-400 via-gray-700 to-black border-0 luxury-shadow max-w-3xl">
-          <div className="p-8 space-y-6">
+        <Card className="relative overflow-hidden border-0 luxury-shadow">
+          {/* Animated gradient background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-400 via-gray-600 to-black animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-gray-500/30 via-transparent to-gray-300/20 animate-gradient-pulse" />
+          
+          <div className="relative p-8 space-y-6">
             {/* Header */}
             <div>
               <h2 className="text-3xl font-bold text-white">Platinum Member</h2>

@@ -72,13 +72,13 @@ export function CurrentGiveaway({
   }, [userEntries]);
 
   return (
-    <Card className="relative overflow-hidden bg-black border-border/50 animate-fade-up">
+    <Card className="relative overflow-hidden bg-card border-border shadow-lg animate-fade-up">
       {/* Animated Entries - Top Right */}
       <div className="absolute top-6 right-6 text-right">
-        <p className="text-5xl font-bold text-white mb-1">
+        <p className="text-5xl font-bold text-foreground mb-1">
           {animatedEntries.toLocaleString()}
         </p>
-        <p className="text-sm text-white/80 uppercase tracking-wider">ENTRIES</p>
+        <p className="text-sm text-muted-foreground uppercase tracking-wider">ENTRIES</p>
       </div>
 
       <div className="relative p-6 flex flex-col md:flex-row gap-6 items-center">
@@ -94,10 +94,10 @@ export function CurrentGiveaway({
         {/* Content */}
         <div className="flex-1 space-y-4 text-center md:text-left">
           <div>
-            <p className="text-sm text-white/70 uppercase tracking-wider mb-2">
+            <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">
               Current Giveaway
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-1">
+            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
               {prizeTitle}
             </h2>
           </div>
@@ -106,8 +106,8 @@ export function CurrentGiveaway({
           <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg w-fit mx-auto md:mx-0">
             <Timer className="w-5 h-5 text-primary" />
             <div>
-              <p className="text-xs text-white/70">Draw ends in</p>
-              <p className="font-mono font-semibold text-white">{timeLeft}</p>
+              <p className="text-xs text-muted-foreground">Draw ends in</p>
+              <p className="font-mono font-semibold text-foreground">{timeLeft}</p>
             </div>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function CurrentGiveaway({
 
       {/* Relax Text - Bottom with Timer Reveal */}
       <div className={`px-6 pb-6 transition-all duration-700 ${showRelaxText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-        <p className="text-2xl md:text-3xl font-semibold text-white text-center">
+        <p className="text-2xl md:text-3xl font-semibold text-foreground text-center">
           Relax — you're already locked into this draw.
         </p>
       </div>
