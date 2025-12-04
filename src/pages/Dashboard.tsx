@@ -3,6 +3,7 @@ import { MembershipChip } from "@/components/dashboard/MembershipChip";
 import { PerkCard } from "@/components/dashboard/PerkCard";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
+import businessClassImage from "@/assets/business-class-cabin.jpg";
 
 const Dashboard = () => {
   return (
@@ -26,7 +27,7 @@ const Dashboard = () => {
       {/* Membership Perks */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-foreground">Your Membership</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <PerkCard
             title="Grail Plus Basic"
             variant="navy"
@@ -38,22 +39,13 @@ const Dashboard = () => {
             ]}
           />
           <PerkCard
-            title="1 per draw"
-            variant="orange"
+            title="Business Class Seat Discounts"
+            variant="image"
+            backgroundImage={businessClassImage}
             features={[
-              "Accumulating +1 every 2 weeks",
-              "Early bird access to new releases",
-              "Exclusive member-only prizes",
-            ]}
-          />
-          <PerkCard
-            title="Enjoy access to early bird"
-            variant="cyan"
-            features={[
-              "All draw long",
-              "First look at upcoming giveaways",
-              "Premium support",
-              "VIP community access",
+              "Exclusive discounts on premium flights",
+              "Priority booking access",
+              "Complimentary upgrades when available",
             ]}
           />
         </div>
