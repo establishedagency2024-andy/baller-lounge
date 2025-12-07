@@ -1,34 +1,13 @@
-import { useState, useEffect } from "react";
-import { Sparkles } from "lucide-react";
+import { useState } from "react";
+import bbLogo from "@/assets/bb-logo.png";
 
 interface MembershipCardProps {
   memberName: string;
-  memberNumber: number;
   memberDate: string;
 }
 
-export function MembershipCard({ memberName, memberNumber, memberDate }: MembershipCardProps) {
+export function MembershipCard({ memberName, memberDate }: MembershipCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
-  const [animatedNumber, setAnimatedNumber] = useState(0);
-
-  useEffect(() => {
-    const target = memberNumber;
-    const steps = 60;
-    const increment = target / steps;
-    let currentStep = 0;
-
-    const timer = setInterval(() => {
-      currentStep++;
-      if (currentStep >= steps) {
-        setAnimatedNumber(target);
-        clearInterval(timer);
-      } else {
-        setAnimatedNumber(Math.floor(increment * currentStep));
-      }
-    }, 2000 / steps);
-
-    return () => clearInterval(timer);
-  }, [memberNumber]);
 
   return (
     <div className="flex flex-col md:flex-row gap-8 justify-center items-center">
@@ -55,23 +34,14 @@ export function MembershipCard({ memberName, memberNumber, memberDate }: Members
                 ))}
               </h2>
             </div>
-            <div className="text-right">
-              <p className="text-2xl font-bold text-white/90 font-mono">
-                {animatedNumber}
-              </p>
-              <p className="text-xs text-white/60 uppercase tracking-wider">entries</p>
+            <div>
+              <img src={bbLogo} alt="BB Logo" className="w-16 h-16 object-contain" />
             </div>
           </div>
           
           {/* Bottom section */}
           <div className="flex justify-between items-end">
             <span className="text-xl font-bold text-white/90">{memberDate}</span>
-            <div className="flex items-center gap-1">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-4xl font-black text-primary tracking-tight" style={{ fontFamily: 'system-ui' }}>
-                BB
-              </span>
-            </div>
           </div>
         </div>
       </div>
@@ -81,39 +51,9 @@ export function MembershipCard({ memberName, memberNumber, memberDate }: Members
         className="relative w-[380px] h-[240px] rounded-2xl overflow-hidden cursor-pointer transition-transform duration-300 hover:scale-105 luxury-shadow bg-[#1a1a1a]"
         onClick={() => setIsFlipped(!isFlipped)}
       >
-        {/* Large BB design */}
+        {/* Large BB Logo */}
         <div className="absolute inset-0 flex items-center justify-center">
-          {/* Stylized BB text */}
-          <div className="relative">
-            <span 
-              className="text-[140px] font-black text-primary leading-none tracking-tighter"
-              style={{ 
-                fontFamily: 'system-ui',
-                WebkitTextStroke: '3px hsl(var(--primary))',
-                color: 'transparent',
-                paintOrder: 'stroke fill'
-              }}
-            >
-              BB
-            </span>
-            {/* Inner stroke effect */}
-            <span 
-              className="absolute inset-0 text-[140px] font-black text-[#1a1a1a] leading-none tracking-tighter"
-              style={{ 
-                fontFamily: 'system-ui',
-                WebkitTextStroke: '0px',
-                transform: 'scale(0.85)',
-                transformOrigin: 'center'
-              }}
-            >
-              BB
-            </span>
-          </div>
-        </div>
-        
-        {/* Decorative elements */}
-        <div className="absolute top-4 right-4">
-          <Sparkles className="w-4 h-4 text-white/60" />
+          <img src={bbLogo} alt="BB Logo" className="w-32 h-32 object-contain" />
         </div>
         
         {/* Side text */}
