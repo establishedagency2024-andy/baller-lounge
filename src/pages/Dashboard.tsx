@@ -29,13 +29,12 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Your Membership</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <PerkCard
-            title="Grail Plus Basic"
+            title="Platinum Member"
             variant="navy"
             features={[
-              "1 entry into every draw long (accumulating +1 entry 2 weeks)",
-              "1 connect credits send to our app (1 connect credits every 2 weeks)",
-              "6x multiplier on all future one-time purchases, all draw long",
-              "You can pause your membership in 2 days for up to 3 months.",
+              "1 Free entry on sign up into every hype/watch giveaway",
+              "+1 Free accumulating entry added every month",
+              "Exclusive access to discounts with partners",
             ]}
           />
           <PerkCard

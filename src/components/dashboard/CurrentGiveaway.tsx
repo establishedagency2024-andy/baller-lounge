@@ -108,14 +108,14 @@ export function CurrentGiveaway({
             <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">
               Current Giveaway
             </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-1">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-1">
               {prizeTitle}
             </h2>
           </div>
 
           {/* Relax Text - Under Title */}
           <div className={`transition-all duration-700 ${showRelaxText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <p className="text-xl md:text-2xl font-semibold text-foreground">
+            <p className="text-xl md:text-2xl font-semibold text-foreground italic">
               Relax — you're already locked into this draw.
             </p>
           </div>
