@@ -16,7 +16,6 @@ const Membership = () => {
 
         <MembershipCard 
           memberName="Andrew De Angelis"
-          memberNumber={137}
           memberDate="10/24"
         />
 
