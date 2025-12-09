@@ -55,8 +55,8 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
         <Card className="relative overflow-hidden border-0 luxury-shadow">
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-yellow-700 to-amber-900 animate-gradient-shift" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/20 via-transparent to-amber-400/15 animate-gradient-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#8a8a5a] via-[#6b6b3c] to-[#4a4a2a] animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-[#9a9a6a]/20 via-transparent to-[#7a7a4a]/15 animate-gradient-pulse" />
           
           <div className="relative p-8 space-y-6">
             {/* Header */}
