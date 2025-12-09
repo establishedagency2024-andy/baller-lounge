@@ -27,15 +27,15 @@ export function DashboardHeader() {
   return (
     <Card className="relative overflow-hidden border-border/50 animate-fade-up mb-6">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#6a6a72] via-[#4a4a52] to-[#2a2a32] animate-gradient-shift" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-[#7a7a82]/20 via-transparent to-[#5a5a62]/15 animate-gradient-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#4a4a4a] via-[#3a3a3a] to-[#1a1a1a] animate-gradient-shift" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-[#5a5a5a]/20 via-transparent to-[#4a4a4a]/15 animate-gradient-pulse" />
       
       <div className="relative px-8 py-6">
         <div className="flex items-center justify-between">
-          {/* Silver Member - Left */}
+          {/* Platinum Member - Left */}
           <div className="flex items-center gap-3">
             <Crown className="w-6 h-6 text-white" />
-            <span className="text-xl font-bold text-white">Silver Member</span>
+            <span className="text-xl font-bold text-white">Platinum Member</span>
           </div>
           
           {/* Days Counter - Right */}
