@@ -29,8 +29,8 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Your Membership</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <PerkCard
-            title="Platinum Member"
-            variant="navy"
+            title="Gold Member"
+            variant="gold"
             features={[
               "1 Free entry on sign up into every hype/watch giveaway",
               "+1 Free accumulating entry added every month",
@@ -55,8 +55,8 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
         <Card className="relative overflow-hidden border-0 luxury-shadow">
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-700 animate-gradient-shift" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-yellow-300/30 via-transparent to-amber-300/20 animate-gradient-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-yellow-700 to-amber-900 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/20 via-transparent to-amber-400/15 animate-gradient-pulse" />
           
           <div className="relative p-8 space-y-6">
             {/* Header */}
