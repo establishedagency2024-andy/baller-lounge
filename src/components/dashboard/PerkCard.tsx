@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface PerkCardProps {
   title: string;
   features: string[];
-  variant?: "navy" | "orange" | "cyan" | "image";
+  variant?: "navy" | "orange" | "cyan" | "image" | "gold";
   className?: string;
   backgroundImage?: string;
 }
@@ -15,6 +15,7 @@ const variantStyles = {
   orange: "bg-gradient-to-br from-orange-600 to-orange-500",
   cyan: "bg-gradient-to-br from-cyan-600 to-cyan-500",
   image: "",
+  gold: "",
 };
 
 export function PerkCard({ title, features, variant = "navy", className, backgroundImage }: PerkCardProps) {
@@ -22,10 +23,16 @@ export function PerkCard({ title, features, variant = "navy", className, backgro
     <Card
       className={cn(
         "luxury-shadow border-0 p-6 smooth-transition hover:scale-105 animate-fade-up relative overflow-hidden",
-        variant !== "image" && variantStyles[variant],
+        variant !== "image" && variant !== "gold" && variantStyles[variant],
         className
       )}
     >
+      {variant === "gold" && (
+        <>
+          <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-yellow-700 to-amber-900 animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/20 via-transparent to-amber-400/15 animate-gradient-pulse" />
+        </>
+      )}
       {backgroundImage && (
         <>
           <div 

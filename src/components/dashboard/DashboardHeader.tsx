@@ -27,8 +27,8 @@ export function DashboardHeader() {
   return (
     <Card className="relative overflow-hidden border-border/50 animate-fade-up mb-6">
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-400 via-yellow-500 to-amber-700 animate-gradient-shift" />
-      <div className="absolute inset-0 bg-gradient-to-tl from-yellow-300/30 via-transparent to-amber-300/20 animate-gradient-pulse" />
+      <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-yellow-700 to-amber-900 animate-gradient-shift" />
+      <div className="absolute inset-0 bg-gradient-to-tl from-yellow-500/20 via-transparent to-amber-400/15 animate-gradient-pulse" />
       
       <div className="relative px-8 py-6">
         <div className="flex items-center justify-between">
