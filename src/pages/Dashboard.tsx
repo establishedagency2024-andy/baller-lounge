@@ -29,8 +29,8 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Your Membership</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <PerkCard
-            title="Silver Member"
-            variant="silver"
+            title="Platinum Member"
+            variant="platinum"
             features={[
               "1 Free entry on sign up into every hype/watch giveaway",
               "+1 Free accumulating entry added every month",
@@ -55,13 +55,13 @@ const Dashboard = () => {
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
         <Card className="relative overflow-hidden border-0 luxury-shadow">
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#6a6a72] via-[#4a4a52] to-[#2a2a32] animate-gradient-shift" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-[#7a7a82]/20 via-transparent to-[#5a5a62]/15 animate-gradient-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#4a4a4a] via-[#3a3a3a] to-[#1a1a1a] animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-[#5a5a5a]/20 via-transparent to-[#4a4a4a]/15 animate-gradient-pulse" />
           
           <div className="relative p-8 space-y-6">
             {/* Header */}
             <div>
-              <h2 className="text-3xl font-bold text-white">Silver Member</h2>
+              <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
             </div>
 
             {/* Status Badges */}
