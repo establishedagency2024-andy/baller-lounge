@@ -1,124 +1,121 @@
-import { Timer } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 import rolexImage from "@/assets/rolex-giveaway.jpg";
 
 interface CurrentGiveawayProps {
-  prizeTitle?: string;
   prizeImage?: string;
-  userEntries?: number;
-  totalEntries?: number;
+  brandName?: string;
+  model?: string;
+  modelReference?: string;
+  liveDrawDate?: string;
+  marketValue?: string;
   endDate?: Date;
+  drawDescription?: string;
 }
 
 export function CurrentGiveaway({
-  prizeTitle = "Win a Rolex Datejust 41 Blue Dial",
   prizeImage = rolexImage,
-  userEntries = 137,
-  totalEntries = 915,
-  endDate = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000), // 7 days from now
+  brandName = "ROLEX",
+  model = "DATEJUST 41MM",
+  modelReference = "126300-0019",
+  liveDrawDate = "FEBRUARY 15, 2026",
+  marketValue = "$16,500 AUD",
+  endDate = new Date(2026, 1, 15),
+  drawDescription = "The draw will take place 15th February 2026 or 24 hours after all 500 memberships are sold, but the draw will go ahead either way regardless of numbers, which ever comes first.",
 }: CurrentGiveawayProps) {
-  const [timeLeft, setTimeLeft] = useState("");
-  const [animatedEntries, setAnimatedEntries] = useState(0);
-  const [showRelaxText, setShowRelaxText] = useState(false);
+  const [days, setDays] = useState("00");
+  const [hours, setHours] = useState("00");
+  const [minutes, setMinutes] = useState("00");
+  const [seconds, setSeconds] = useState("00");
 
   useEffect(() => {
     const calculateTimeLeft = () => {
       const difference = endDate.getTime() - new Date().getTime();
-      
+
       if (difference > 0) {
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((difference / 1000 / 60) % 60);
-        const seconds = Math.floor((difference / 1000) % 60);
-        
-        setTimeLeft(`${days}d ${hours}h ${minutes}m ${seconds}s`);
-      } else {
-        setTimeLeft("Draw ended");
+        setDays(String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, "0"));
+        setHours(String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, "0"));
+        setMinutes(String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, "0"));
+        setSeconds(String(Math.floor((difference / 1000) % 60)).padStart(2, "0"));
       }
     };
 
     calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
-
     return () => clearInterval(timer);
   }, [endDate]);
 
-  useEffect(() => {
-    // Animate entries counter
-    const steps = 60;
-    const increment = userEntries / steps;
-    let currentStep = 0;
+  const specs = [
+    { label: "BRAND NAME", value: brandName },
+    { label: "MODEL", value: model },
+    { label: "MODEL REFERENCE", value: modelReference },
+    { label: "LIVE DRAW", value: liveDrawDate },
+    { label: "MARKET VALUE", value: marketValue },
+  ];
 
-    const entriesTimer = setInterval(() => {
-      currentStep++;
-      if (currentStep >= steps) {
-        setAnimatedEntries(userEntries);
-        clearInterval(entriesTimer);
-      } else {
-        setAnimatedEntries(Math.floor(increment * currentStep));
-      }
-    }, 2000 / steps);
-
-    // Reveal relax text after 1 second
-    const textTimer = setTimeout(() => {
-      setShowRelaxText(true);
-    }, 1000);
-
-    return () => {
-      clearInterval(entriesTimer);
-      clearTimeout(textTimer);
-    };
-  }, [userEntries]);
+  const countdownItems = [
+    { value: days, label: "Days" },
+    { value: hours, label: "Hours" },
+    { value: minutes, label: "Minutes" },
+    { value: seconds, label: "Seconds" },
+  ];
 
   return (
-    <Card className="relative overflow-hidden bg-card border-border shadow-lg animate-fade-up">
-      {/* Animated Entries - Top Right */}
-      <div className="absolute top-6 right-6 text-right">
-        <p className="text-5xl font-bold text-foreground mb-1">
-          {animatedEntries.toLocaleString()}
-        </p>
-        <p className="text-sm text-muted-foreground uppercase tracking-wider">TOTAL ENTRIES</p>
-      </div>
+    <Card className="relative overflow-hidden border-0 animate-fade-up">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#16162a] to-[#0d0d1a]" />
 
-      <div className="relative p-6 flex flex-col md:flex-row gap-6 items-start">
-        {/* Prize Image and Timer */}
-        <div className="flex flex-col items-center gap-4 flex-shrink-0">
-          <div className="w-full md:w-48 h-48 rounded-xl overflow-hidden luxury-shadow glow-blue">
-            <img 
-              src={prizeImage} 
-              alt={prizeTitle}
-              className="w-full h-full object-cover"
-            />
-          </div>
-          
-          {/* Countdown - Under Image */}
-          <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-lg">
-            <Timer className="w-5 h-5 text-primary" />
-            <div>
-              <p className="text-xs text-muted-foreground">Draw ends in</p>
-              <p className="font-mono font-semibold text-foreground">{timeLeft}</p>
-            </div>
-          </div>
+      <div className="relative flex flex-col md:flex-row">
+        {/* Image Section */}
+        <div className="relative md:w-1/2 min-h-[300px] md:min-h-[420px]">
+          <img
+            src={prizeImage}
+            alt={`${brandName} ${model}`}
+            className="w-full h-full object-cover absolute inset-0"
+          />
+          {/* Nav arrows */}
+          <button className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-white/70 hover:bg-white/10 transition-colors">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-white/70 hover:bg-white/10 transition-colors">
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
 
-        {/* Content */}
-        <div className="flex-1 space-y-4 text-center md:text-left">
-          <div>
-            <p className="text-sm text-muted-foreground uppercase tracking-wider mb-2">
-              Current Giveaway
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-1">
-              {prizeTitle}
-            </h2>
+        {/* Details Section */}
+        <div className="md:w-1/2 p-6 md:p-8 space-y-5">
+          {/* Specs */}
+          <div className="space-y-3">
+            {specs.map((spec) => (
+              <div key={spec.label}>
+                <span className="text-white/60 text-sm tracking-wider">{spec.label} – </span>
+                <span className="text-white font-bold text-sm">{spec.value}</span>
+              </div>
+            ))}
           </div>
 
-          {/* Relax Text - Under Title */}
-          <div className={`transition-all duration-700 ${showRelaxText ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-            <p className="text-xl md:text-2xl font-semibold text-foreground italic">
-              Relax — you're already locked into this draw.
-            </p>
+          {/* Countdown */}
+          <div className="flex gap-4">
+            {countdownItems.map((item) => (
+              <div key={item.label} className="text-center">
+                <p className="text-2xl md:text-3xl font-bold text-white font-mono">{item.value}</p>
+                <p className="text-xs text-white/50 mt-1">{item.label}</p>
+              </div>
+            ))}
           </div>
+
+          {/* Description */}
+          <p className="text-white/60 text-sm leading-relaxed">{drawDescription}</p>
+
+          {/* CTA */}
+          <button className="px-8 py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-bold tracking-wider rounded-md flex items-center gap-3 transition-colors">
+            ENTER NOW <ArrowRight className="w-4 h-4" />
+          </button>
+
+          {/* T&Cs */}
+          <a href="#" className="text-white/60 text-sm underline hover:text-white/80 transition-colors inline-block">
+            View promotion T&Cs
+          </a>
         </div>
       </div>
     </Card>
