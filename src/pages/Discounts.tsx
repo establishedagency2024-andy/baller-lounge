@@ -12,32 +12,50 @@ const Discounts = () => {
     { 
       category: "Flight", 
       title: "Platinum Members 30 - 70% Off Business and First Class Tickets",
-      imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
+      partnerName: "SkyLux Aviation",
+      partnerDescription: "SkyLux Aviation partners with the world's top airlines to bring Billion Ballers members unbeatable deals on business and first class travel. Fly in style with up to 70% off premium cabin fares worldwide.",
+      discountDetails: "30% – 70% Off Business & First Class Tickets",
     },
     { 
       category: "Hospitality", 
       title: "Platinum Members 60% Off at hotels worldwide from premium hotel groups",
-      imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      partnerName: "Grand Luxe Hotels",
+      partnerDescription: "Grand Luxe Hotels is a curated collection of five-star properties across 40+ countries. As a Platinum member, enjoy preferential rates and complimentary upgrades at participating resorts and city hotels.",
+      discountDetails: "Up to 60% Off Premium Hotel Stays Worldwide",
     },
     { 
       category: "Cars", 
       title: "Platinum Members 40% Off luxury vehicle rentals and experiences",
-      imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80",
+      partnerName: "Prestige Drive",
+      partnerDescription: "Prestige Drive offers an elite fleet of luxury and supercar rentals. From Lamborghinis to Rolls-Royces, experience the thrill of driving the world's finest vehicles at exclusive member rates.",
+      discountDetails: "40% Off Luxury & Supercar Rentals",
     },
     { 
       category: "Fashion", 
       title: "Platinum Members 50% Off designer fashion collections",
-      imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
+      partnerName: "Atelier Privé",
+      partnerDescription: "Atelier Privé is a members-only fashion house offering exclusive access to designer collections, private showroom appointments, and bespoke tailoring services for the discerning gentleman and lady.",
+      discountDetails: "50% Off Designer Fashion Collections",
     },
     { 
       category: "Beauty", 
       title: "Platinum Members 35% Off premium beauty and skincare products",
-      imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=800&q=80",
+      partnerName: "Lumière Beauty",
+      partnerDescription: "Lumière Beauty is a premium skincare and cosmetics brand known for its use of rare, scientifically-backed ingredients. Platinum members enjoy exclusive discounts on their full product range and spa treatments.",
+      discountDetails: "35% Off Premium Beauty & Skincare",
     },
     { 
       category: "Fitness", 
       title: "Platinum Members 45% Off elite gym memberships and wellness programs",
-      imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80"
+      imageUrl: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+      partnerName: "Apex Fitness Club",
+      partnerDescription: "Apex Fitness Club operates boutique luxury gyms with personal training, recovery suites, and wellness programming. Platinum members receive priority access and significant savings on annual memberships.",
+      discountDetails: "45% Off Elite Gym & Wellness Memberships",
     },
   ];
 
