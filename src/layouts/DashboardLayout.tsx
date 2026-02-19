@@ -13,13 +13,14 @@ export function DashboardLayout() {
         isCollapsed={isSidebarCollapsed} 
         onToggle={() => setIsSidebarCollapsed(!isSidebarCollapsed)} 
       />
-      <main 
+      <main
         className={cn(
-          "flex-1 transition-all duration-300",
+          "flex-1 transition-all duration-300 relative overflow-hidden",
           isSidebarCollapsed ? "ml-16" : "ml-64"
         )}
       >
-        <div className="max-w-7xl mx-auto px-8 pt-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent pointer-events-none h-[400px]" />
+        <div className="relative max-w-7xl mx-auto px-8 pt-8">
           <DashboardHeader />
           <Outlet />
         </div>
