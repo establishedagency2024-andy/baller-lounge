@@ -19,7 +19,7 @@ export function DashboardLayout() {
           isSidebarCollapsed ? "ml-16" : "ml-64"
         )}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-primary/5 to-transparent pointer-events-none h-[400px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-primary/15 to-transparent pointer-events-none h-[800px]" />
         <div className="relative max-w-7xl mx-auto px-8 pt-8">
           <DashboardHeader />
           <Outlet />
