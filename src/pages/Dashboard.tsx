@@ -15,8 +15,7 @@ const Dashboard = () => {
 
       {/* Greeting Section */}
       <div className="space-y-2 animate-slide-in">
-        <MembershipChip tier="platinum" />
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground mt-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground">
           Good Morning, Andy.
         </h1>
         <p className="text-lg text-muted-foreground">
