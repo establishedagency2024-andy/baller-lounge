@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div className="space-y-8 animate-fade-up">
       {/* Current Giveaway - Sticky */}
-      <div className="sticky top-0 z-10 pb-4 bg-background/95 backdrop-blur-sm">
+      <div className="sticky top-0 z-10 pb-4">
         <CurrentGiveaway />
       </div>
 
