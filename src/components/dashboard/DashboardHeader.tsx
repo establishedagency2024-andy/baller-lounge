@@ -34,8 +34,8 @@ export function DashboardHeader() {
         <div className="flex items-center justify-between">
           {/* Platinum Member - Left */}
           <div className="flex items-center gap-3">
-            <Crown className="w-6 h-6 text-white" />
-            <span className="text-xl font-bold text-white">Platinum Member</span>
+            <Crown className="w-6 h-6 text-foreground" />
+            <span className="text-xl font-bold text-foreground">Platinum Member</span>
           </div>
           
           {/* Days Counter - Right */}
