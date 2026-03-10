@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 
 interface PerkCardProps {
   title: string;
-  features: string[];
+  features?: string[];
+  description?: string;
   variant?: "navy" | "orange" | "cyan" | "image" | "platinum";
   className?: string;
   backgroundImage?: string;
