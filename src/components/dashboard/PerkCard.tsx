@@ -4,7 +4,8 @@ import { cn } from "@/lib/utils";
 
 interface PerkCardProps {
   title: string;
-  features: string[];
+  features?: string[];
+  description?: string;
   variant?: "navy" | "orange" | "cyan" | "image" | "platinum";
   className?: string;
   backgroundImage?: string;
@@ -18,7 +19,7 @@ const variantStyles = {
   platinum: "",
 };
 
-export function PerkCard({ title, features, variant = "navy", className, backgroundImage }: PerkCardProps) {
+export function PerkCard({ title, features, description, variant = "navy", className, backgroundImage }: PerkCardProps) {
   return (
     <Card
       className={cn(
@@ -44,14 +45,18 @@ export function PerkCard({ title, features, variant = "navy", className, backgro
       )}
       <div className="relative z-10">
         <h3 className="text-xl font-bold text-white mb-4">{title}</h3>
-        <ul className="space-y-2">
-          {features.map((feature, index) => (
-            <li key={index} className="flex items-start gap-2 text-white/90 text-sm">
-              <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
-              <span>{feature}</span>
-            </li>
-          ))}
-        </ul>
+        {description ? (
+          <p className="text-white/90 text-sm leading-relaxed">{description}</p>
+        ) : features ? (
+          <ul className="space-y-2">
+            {features.map((feature, index) => (
+              <li key={index} className="flex items-start gap-2 text-white/90 text-sm">
+                <Check className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </Card>
   );
