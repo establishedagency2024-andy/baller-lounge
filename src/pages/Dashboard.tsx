@@ -33,14 +33,10 @@ const Dashboard = () => {
             description="Platinum is the highest level of access within Billion Ballers. Members enjoy priority entry into luxury giveaways, exclusive partner discounts, and privileged pricing on premium global travel. Designed for those who expect the best from every experience."
           />
           <PerkCard
-            title="Business Class Seat Discounts"
+            title="First & Business Class Discounts"
             variant="image"
             backgroundImage={businessClassImage}
-            features={[
-              "Exclusive discounts on premium flights",
-              "Priority booking access",
-              "Complimentary upgrades when available",
-            ]}
+            description="Platinum members enjoy access to private flight pricing with savings of up to 50% on business and first class fares with leading global airlines. Travel in premium comfort while paying significantly less than public fares. Subject to availability."
           />
         </div>
       </section>
