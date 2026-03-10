@@ -19,7 +19,7 @@ const variantStyles = {
   platinum: "",
 };
 
-export function PerkCard({ title, features, variant = "navy", className, backgroundImage }: PerkCardProps) {
+export function PerkCard({ title, features, description, variant = "navy", className, backgroundImage }: PerkCardProps) {
   return (
     <Card
       className={cn(
