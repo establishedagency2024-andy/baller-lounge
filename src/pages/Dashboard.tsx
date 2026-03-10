@@ -30,11 +30,7 @@ const Dashboard = () => {
           <PerkCard
             title="Platinum Member"
             variant="platinum"
-            features={[
-              "1 Free entry on sign up into every hype/watch giveaway",
-              "+1 Free accumulating entry added every month",
-              "Exclusive access to discounts with partners",
-            ]}
+            description="Platinum is the highest level of access within Billion Ballers. Members enjoy priority entry into luxury giveaways, exclusive partner discounts, and privileged pricing on premium global travel. Designed for those who expect the best from every experience."
           />
           <PerkCard
             title="Business Class Seat Discounts"
