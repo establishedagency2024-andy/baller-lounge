@@ -1,6 +1,7 @@
 import { LayoutDashboard, CreditCard, Trophy, Gift, Settings, ChevronLeft, ChevronRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { cn } from "@/lib/utils";
+import logoWordmark from "@/assets/logo-wordmark.png";
 
 const menuItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
