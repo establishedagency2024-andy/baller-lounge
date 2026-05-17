@@ -26,16 +26,11 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
     >
       <div className="flex flex-col h-full">
         {/* Logo/Brand */}
-        <div className="p-6">
-          {!isCollapsed && (
-            <h1 className="text-2xl font-bold text-foreground">
-              Billion Ballers
-            </h1>
-          )}
-          {isCollapsed && (
-            <h1 className="text-2xl font-bold text-foreground text-center">
-              BB
-            </h1>
+        <div className="p-6 flex items-center justify-center">
+          {!isCollapsed ? (
+            <img src={logoWordmark} alt="Billion Ballers" className="h-8 w-auto object-contain" />
+          ) : (
+            <h1 className="text-2xl font-bold text-sidebar-foreground text-center">BB</h1>
           )}
         </div>
 
