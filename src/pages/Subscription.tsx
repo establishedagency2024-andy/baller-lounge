@@ -66,30 +66,30 @@ const Subscription = () => {
         {/* Billing Information */}
         <Card className="luxury-gradient-card luxury-shadow border-border/50 max-w-3xl">
           <div className="p-8 space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">Billing Information</h3>
+            <h3 className="text-2xl font-bold text-neutral-900">Billing Information</h3>
             
             <div className="space-y-4">
-              <div className="flex items-center justify-between p-4 bg-muted/20 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-black/5 rounded-lg">
                 <div className="flex items-center gap-3">
                   <Calendar className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-medium text-foreground">Next billing date</p>
-                    <p className="text-sm text-muted-foreground">Your next payment</p>
+                    <p className="font-medium text-neutral-900">Next billing date</p>
+                    <p className="text-sm text-neutral-600">Your next payment</p>
                   </div>
                 </div>
-                <p className="font-semibold text-foreground">November 30, 2025</p>
+                <p className="font-semibold text-neutral-900">November 30, 2025</p>
               </div>
 
-              <div className="flex items-center justify-between p-4 bg-muted/20 rounded-lg">
+              <div className="flex items-center justify-between p-4 bg-black/5 rounded-lg">
                 <div className="flex items-center gap-3">
                   <CreditCard className="w-5 h-5 text-primary" />
                   <div>
-                    <p className="font-medium text-foreground">Plan</p>
-                    <p className="text-sm text-muted-foreground">Current subscription tier</p>
+                    <p className="font-medium text-neutral-900">Plan</p>
+                    <p className="text-sm text-neutral-600">Current subscription tier</p>
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="font-semibold text-foreground">Basic</p>
+                  <p className="font-semibold text-neutral-900">Basic</p>
                   <Button variant="link" className="h-auto p-0 text-primary">
                     Change
                   </Button>
