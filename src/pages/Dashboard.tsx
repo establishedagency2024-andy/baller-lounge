@@ -1,6 +1,7 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
+import wordmarkWhite from "@/assets/wordmark-white.png";
 
 const Dashboard = () => {
   return (
