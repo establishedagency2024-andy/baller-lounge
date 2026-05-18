@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Light Theme - Billion Ballers */
-    --background: 0 0% 100%;
-    --foreground: 220 26% 12%;
+    /* Dark Theme - Billion Ballers */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 220 26% 12%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 12%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 100%;
 
     /* Blue accent - primary brand color */
     --primary: 217 91% 60%;
@@ -26,8 +26,8 @@ All colors MUST be HSL.
     --secondary: 210 10% 50%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 10% 95%;
-    --muted-foreground: 220 10% 40%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 75%;
 
     --accent: 217 91% 60%;
     --accent-foreground: 0 0% 100%;
@@ -35,8 +35,8 @@ All colors MUST be HSL.
     --destructive: 0 70% 58%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 10% 85%;
-    --input: 220 10% 85%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
     --ring: 217 91% 60%;
 
     --radius: 0.75rem;
