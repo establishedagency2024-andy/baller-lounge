@@ -1,4 +1,4 @@
-import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
+
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, TrendingUp } from "lucide-react";
