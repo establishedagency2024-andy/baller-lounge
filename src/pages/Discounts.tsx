@@ -1,4 +1,4 @@
-import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
+
 import { DiscountCard } from "@/components/dashboard/DiscountCard";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -65,11 +65,6 @@ const Discounts = () => {
 
   return (
     <div className="space-y-8 animate-fade-up pb-12">
-      {/* Current Giveaway - Sticky */}
-      <div className="sticky top-0 z-10 pb-4 bg-background/95 backdrop-blur-sm">
-        <CurrentGiveaway />
-      </div>
-
       <div className="space-y-8">
         {/* Header - Centered */}
         <div className="text-center max-w-3xl mx-auto">
