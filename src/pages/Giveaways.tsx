@@ -55,8 +55,8 @@ const Giveaways = () => {
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Total Entries</p>
-                <p className="text-3xl font-bold text-foreground">{entryCount}</p>
+                <p className="text-sm text-neutral-600">Total Entries</p>
+                <p className="text-3xl font-bold text-neutral-900">{entryCount}</p>
               </div>
             </div>
           </Card>
@@ -67,8 +67,8 @@ const Giveaways = () => {
                 <Calendar className="w-6 h-6 text-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">Next Entry</p>
-                <p className="text-3xl font-bold text-foreground">{nextEntryDays}d</p>
+                <p className="text-sm text-neutral-600">Next Entry</p>
+                <p className="text-3xl font-bold text-neutral-900">{nextEntryDays}d</p>
               </div>
             </div>
           </Card>
@@ -76,26 +76,26 @@ const Giveaways = () => {
 
         {/* Entry Accumulation Timeline */}
         <Card className="luxury-gradient-card luxury-shadow border-border/50 p-6">
-          <h3 className="text-xl font-bold text-foreground mb-4">Entry Accumulation</h3>
+          <h3 className="text-xl font-bold text-neutral-900 mb-4">Entry Accumulation</h3>
           <div className="space-y-4">
-            <div className="flex items-center justify-between p-4 bg-muted/20 rounded-lg">
+            <div className="flex items-center justify-between p-4 bg-black/5 rounded-lg">
               <div>
-                <p className="font-semibold text-foreground">Current Period</p>
-                <p className="text-sm text-muted-foreground">Nov 23 - Dec 7, 2025</p>
+                <p className="font-semibold text-neutral-900">Current Period</p>
+                <p className="text-sm text-neutral-600">Nov 23 - Dec 7, 2025</p>
               </div>
               <div className="text-right">
                 <p className="text-2xl font-bold text-primary">+{currentPeriodEntries}</p>
-                <p className="text-sm text-muted-foreground">entry</p>
+                <p className="text-sm text-neutral-600">entry</p>
               </div>
             </div>
-            <div className="flex items-center justify-between p-4 bg-muted/10 rounded-lg">
+            <div className="flex items-center justify-between p-4 bg-black/5 rounded-lg">
               <div>
-                <p className="font-semibold text-foreground">Next Period</p>
-                <p className="text-sm text-muted-foreground">Dec 7 - Dec 21, 2025</p>
+                <p className="font-semibold text-neutral-900">Next Period</p>
+                <p className="text-sm text-neutral-600">Dec 7 - Dec 21, 2025</p>
               </div>
               <div className="text-right">
-                <p className="text-2xl font-bold text-muted-foreground">+{nextPeriodEntries}</p>
-                <p className="text-sm text-muted-foreground">entry</p>
+                <p className="text-2xl font-bold text-neutral-500">+{nextPeriodEntries}</p>
+                <p className="text-sm text-neutral-600">entry</p>
               </div>
             </div>
           </div>
@@ -103,11 +103,12 @@ const Giveaways = () => {
 
         {/* Entry History */}
         <Card className="luxury-gradient-card luxury-shadow border-border/50">
-          <div className="p-6 border-b border-border/50">
+          <div className="p-6 border-b border-black/10">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-bold text-foreground">Entry History</h3>
+              <h3 className="text-xl font-bold text-neutral-900">Entry History</h3>
               <Button
                 variant="ghost"
+                className="text-neutral-900 hover:bg-black/5"
                 onClick={() => setShowHistory(!showHistory)}
               >
                 {showHistory ? "Hide" : "Show"} History
@@ -125,15 +126,15 @@ const Giveaways = () => {
               ].map((entry, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-between p-4 bg-muted/10 rounded-lg hover:bg-muted/20 smooth-transition"
+                  className="flex items-center justify-between p-4 bg-black/5 rounded-lg hover:bg-black/10 smooth-transition"
                 >
                   <div>
-                    <p className="font-medium text-foreground">{entry.reason}</p>
-                    <p className="text-sm text-muted-foreground">{entry.date}</p>
+                    <p className="font-medium text-neutral-900">{entry.reason}</p>
+                    <p className="text-sm text-neutral-600">{entry.date}</p>
                   </div>
                   <div className="text-right">
                     <p className="text-lg font-bold text-primary">+{entry.entries}</p>
-                    <p className="text-xs text-muted-foreground">
+                    <p className="text-xs text-neutral-600">
                       {entry.entries === 1 ? "entry" : "entries"}
                     </p>
                   </div>
