@@ -5,7 +5,7 @@ import logoWordmark from "@/assets/logo-wordmark.png";
 
 const menuItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
-  { title: "Giveaways & Entries", url: "/giveaways", icon: Trophy },
+  { title: "Entry and Order History", url: "/giveaways", icon: Trophy },
   { title: "Discounts & Rewards", url: "/discounts", icon: Gift },
   { title: "Membership Card", url: "/membership", icon: CreditCard },
   { title: "Subscription", url: "/subscription", icon: Settings },
