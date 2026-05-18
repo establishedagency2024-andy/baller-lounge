@@ -24,6 +24,10 @@ export function DashboardLayout() {
         <div className="relative max-w-7xl mx-auto px-8 pt-8">
           <DashboardHeader />
           <Outlet />
+          <div className="pt-32 pb-8 flex flex-col items-center justify-center gap-3">
+            <span className="text-sm text-white/60 uppercase tracking-[0.2em]">Created By</span>
+            <img src={wordmarkWhite} alt="Billion Ballers" className="h-8 object-contain opacity-90" />
+          </div>
         </div>
       </main>
     </div>
