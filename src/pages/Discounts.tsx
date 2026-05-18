@@ -11,11 +11,11 @@ const Discounts = () => {
   const discounts = [
     { 
       category: "Flight", 
-      title: "Platinum Members 30 - 70% Off Business and First Class Tickets",
+      title: "Up to 50% Off Flights",
       imageUrl: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80",
       partnerName: "SkyLux Aviation",
-      partnerDescription: "SkyLux Aviation partners with the world's top airlines to bring Billion Ballers members unbeatable deals on business and first class travel. Fly in style with up to 70% off premium cabin fares worldwide.",
-      discountDetails: "30% – 70% Off Business & First Class Tickets",
+      partnerDescription: "SkyLux Aviation partners with the world's top airlines to bring Billion Ballers members unbeatable deals on flights worldwide. Save up to 50% off across economy, business, and first class fares.",
+      discountDetails: "Up to 50% Off Flights",
     },
     { 
       category: "Hospitality", 
