@@ -23,24 +23,6 @@ const Dashboard = () => {
         </p>
       </div>
 
-      {/* Membership Perks */}
-      <section className="space-y-4">
-        <h2 className="text-2xl font-bold text-foreground">Your Membership</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <PerkCard
-            title="Platinum Member"
-            variant="platinum"
-            description="Platinum is the highest level of access within Billion Ballers. Members enjoy priority entry into luxury giveaways, exclusive partner discounts, and privileged pricing on premium global travel. Designed for those who expect the best from every experience."
-          />
-          <PerkCard
-            title="First & Business Class Discounts"
-            variant="image"
-            backgroundImage={businessClassImage}
-            description="Platinum members enjoy access to private flight pricing with savings of up to 50% on business and first class fares with leading global airlines. Travel in premium comfort while paying significantly less than public fares. Subject to availability."
-          />
-        </div>
-      </section>
-
       {/* Subscription Section */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold text-foreground">Subscription</h2>
