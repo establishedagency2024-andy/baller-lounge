@@ -1,9 +1,6 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
-import { MembershipChip } from "@/components/dashboard/MembershipChip";
-import { PerkCard } from "@/components/dashboard/PerkCard";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
-import businessClassImage from "@/assets/business-class-cabin.jpg";
 
 const Dashboard = () => {
   return (
