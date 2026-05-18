@@ -54,6 +54,20 @@ export function Sidebar({ isCollapsed, onToggle }: SidebarProps) {
           ))}
         </nav>
 
+        {/* Logout */}
+        <div className="p-4 border-t border-sidebar-border">
+          <button
+            onClick={() => console.log("Logout clicked")}
+            className={cn(
+              "w-full flex items-center gap-3 px-4 py-3 rounded-lg smooth-transition hover:bg-sidebar-accent text-sidebar-foreground",
+              isCollapsed && "justify-center px-2"
+            )}
+          >
+            <LogOut className="w-5 h-5 flex-shrink-0" />
+            {!isCollapsed && <span>Logout</span>}
+          </button>
+        </div>
+
         {/* Toggle Button */}
         <button
           onClick={onToggle}
