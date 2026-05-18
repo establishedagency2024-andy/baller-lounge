@@ -9,6 +9,7 @@ import Membership from "./pages/Membership";
 import Giveaways from "./pages/Giveaways";
 import Discounts from "./pages/Discounts";
 import Subscription from "./pages/Subscription";
+import Account from "./pages/Account";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
