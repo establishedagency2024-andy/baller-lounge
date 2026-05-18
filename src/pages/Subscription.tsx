@@ -34,14 +34,10 @@ const Subscription = () => {
               <h2 className="text-3xl font-bold text-white">Platinum Member</h2>
             </div>
 
-            {/* Status Badges */}
+            {/* Status Badge */}
             <div className="flex flex-wrap gap-2">
-              <div className="px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium flex items-center gap-2">
-                <Star className="w-4 h-4" />
-                Level 1
-              </div>
               <div className="px-4 py-2 bg-emerald-500 text-white rounded-full text-sm font-medium">
-                Active and up to date
+                Active
               </div>
             </div>
 
