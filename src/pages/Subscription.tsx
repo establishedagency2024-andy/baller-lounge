@@ -25,8 +25,8 @@ const Subscription = () => {
         {/* Main Subscription Card */}
         <Card className="relative overflow-hidden border-0 luxury-shadow">
           {/* Animated gradient background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gray-400 via-gray-600 to-black animate-gradient-shift" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-gray-500/30 via-transparent to-gray-300/20 animate-gradient-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1e2a4a] via-[#16213e] to-[#0a0f24] animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-[#2a3a5e]/30 via-transparent to-[#1e2a4a]/20 animate-gradient-pulse" />
           
           <div className="relative p-8 space-y-6">
             {/* Header */}
