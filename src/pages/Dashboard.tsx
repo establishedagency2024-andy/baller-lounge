@@ -63,12 +63,6 @@ const Dashboard = () => {
           </div>
         </Card>
       </section>
-
-      {/* Created By footer */}
-      <div className="pt-32 pb-8 flex flex-col items-center justify-center gap-3">
-        <span className="text-sm text-white/60 uppercase tracking-[0.2em]">Created By</span>
-        <img src={wordmarkWhite} alt="Wordmark" className="h-8 object-contain opacity-90" />
-      </div>
     </div>
   );
 };
