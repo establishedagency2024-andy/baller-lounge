@@ -49,6 +49,10 @@ export function MembershipCard({ memberName, memberDate }: MembershipCardProps) 
               <span className="text-[15px] font-bold tracking-[0.18em] text-neutral-700 uppercase">
                 Billion Ballers
               </span>
+              <div className="mt-2 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-600/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span className="text-[10px] font-semibold tracking-[0.15em] text-emerald-700 uppercase">Active</span>
+              </div>
             </div>
           </div>
 
