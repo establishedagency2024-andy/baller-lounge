@@ -44,7 +44,7 @@ const Giveaways = () => {
     <div className="space-y-8 animate-fade-up">
       <div className="space-y-6">
         <h1 className="text-3xl md:text-4xl font-bold text-foreground">
-          Giveaways & Entries
+          Entry and Order History
         </h1>
 
         {/* Entry Stats */}
