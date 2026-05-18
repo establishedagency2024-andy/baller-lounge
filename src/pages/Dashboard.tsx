@@ -1,6 +1,7 @@
 import { CurrentGiveaway } from "@/components/dashboard/CurrentGiveaway";
 import { Card } from "@/components/ui/card";
 import { Check, Star } from "lucide-react";
+import wordmarkWhite from "@/assets/wordmark-white.png";
 
 const Dashboard = () => {
   return (
@@ -62,6 +63,12 @@ const Dashboard = () => {
           </div>
         </Card>
       </section>
+
+      {/* Created By footer */}
+      <div className="pt-32 pb-8 flex flex-col items-center justify-center gap-3">
+        <span className="text-sm text-white/60 uppercase tracking-[0.2em]">Created By</span>
+        <img src={wordmarkWhite} alt="Wordmark" className="h-8 object-contain opacity-90" />
+      </div>
     </div>
   );
 };
