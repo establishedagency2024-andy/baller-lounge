@@ -1,4 +1,4 @@
-import { LayoutDashboard, CreditCard, Trophy, Gift, Settings, ChevronLeft, ChevronRight } from "lucide-react";
+import { LayoutDashboard, CreditCard, Trophy, Gift, Settings, ChevronLeft, ChevronRight, User, LogOut } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { cn } from "@/lib/utils";
 import logoWordmark from "@/assets/logo-wordmark.png";
@@ -9,6 +9,7 @@ const menuItems = [
   { title: "Giveaways & Entries", url: "/giveaways", icon: Trophy },
   { title: "Discounts & Rewards", url: "/discounts", icon: Gift },
   { title: "Subscription", url: "/subscription", icon: Settings },
+  { title: "Account Details", url: "/account", icon: User },
 ];
 
 interface SidebarProps {
