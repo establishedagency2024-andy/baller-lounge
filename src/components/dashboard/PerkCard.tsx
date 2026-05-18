@@ -30,8 +30,8 @@ export function PerkCard({ title, features, description, variant = "navy", class
     >
       {variant === "platinum" && (
         <>
-          <div className="absolute inset-0 bg-gradient-to-br from-[#4a4a4a] via-[#3a3a3a] to-[#1a1a1a] animate-gradient-shift" />
-          <div className="absolute inset-0 bg-gradient-to-tl from-[#5a5a5a]/20 via-transparent to-[#4a4a4a]/15 animate-gradient-pulse" />
+          <div className="absolute inset-0 bg-gradient-to-br from-[#1e2a4a] via-[#16213e] to-[#0a0f24] animate-gradient-shift" />
+          <div className="absolute inset-0 bg-gradient-to-tl from-[#2a3a5e]/30 via-transparent to-[#1e2a4a]/20 animate-gradient-pulse" />
         </>
       )}
       {backgroundImage && (
